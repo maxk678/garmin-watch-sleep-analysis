@@ -8,7 +8,7 @@ The goal is to identify patterns in sleep quality, duration, and stage compositi
 
 ## Data
 
-Data was exported directly from [Garmin Connect]([https://connect.garmin.com](https://www.garmin.com/en-US/account/datamanagement/exportdata)) as JSON files. The raw exports cover **December 2023 through February 2026** and contain nightly records with sleep stage breakdowns, Garmin's proprietary sleep scores, respiration rates, stress levels, and qualitative feedback labels.
+Data was exported directly from [Garmin Connect](https://www.garmin.com/en-US/account/datamanagement/exportdata) as JSON files. The raw exports cover **December 2023 through February 2026** and contain nightly records with sleep stage breakdowns, Garmin's proprietary sleep scores, respiration rates, stress levels, and qualitative feedback labels.
 
 > **Note:** Raw data files are not included in this repository as they contain personal health information. If you want to replicate this project with your own data, you can export your sleep history from Garmin Connect under **Account > Data Management > Export Your Data**.
 
