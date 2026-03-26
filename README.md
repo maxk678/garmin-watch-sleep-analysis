@@ -26,7 +26,7 @@ The project will be structured as a sequential three-notebook pipeline:
 
 ---
 
-## Notebook 1 — sleep concat
+## 01_sleep_concat.ipynb
 
 Loads all 9 raw sleep JSON files and combines them into a single table of 800 nightly records.
 
