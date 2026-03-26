@@ -2,21 +2,21 @@
 
 Exploratory analysis of 2+ years of personal sleep data exported from a Garmin watch via Garmin Connect.
 
-The goal is to identify patterns in sleep quality, duration, and stage composition over time using data I actually collected — no synthetic datasets.
+The goal is to identify patterns in sleep quality, duration, and stage composition over time using data I collected through my Garmin watch.
 
 ---
 
 ## Data
 
-Data was exported directly from [Garmin Connect](https://connect.garmin.com) as JSON files. The raw exports cover **December 2023 through February 2026** and contain nightly records with sleep stage breakdowns, Garmin's proprietary sleep scores, respiration rates, stress levels, and qualitative feedback labels.
+Data was exported directly from [Garmin Connect]([https://connect.garmin.com](https://www.garmin.com/en-US/account/datamanagement/exportdata)) as JSON files. The raw exports cover **December 2023 through February 2026** and contain nightly records with sleep stage breakdowns, Garmin's proprietary sleep scores, respiration rates, stress levels, and qualitative feedback labels.
 
-> **Note:** Raw data files are not included in this repository as they contain personal health information. If you want to replicate this project with your own data, you can export your sleep history from Garmin Connect under **Profile > Garmin Devices > Export Your Data**.
+> **Note:** Raw data files are not included in this repository as they contain personal health information. If you want to replicate this project with your own data, you can export your sleep history from Garmin Connect under **Account > Data Management > Export Your Data**.
 
 ---
 
 ## Pipeline
 
-The project is structured as a sequential three-notebook pipeline:
+The project will be structured as a sequential three-notebook pipeline:
 
 | Notebook | Status | Purpose |
 |---|---|---|
