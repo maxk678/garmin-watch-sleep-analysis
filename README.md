@@ -21,7 +21,7 @@ The project will be structured as a sequential three-notebook pipeline:
 | Notebook | Status | Purpose |
 |---|---|---|
 | `01_sleep_concat.ipynb` | ✅ Complete | Load and combine raw JSON files |
-| `02_sleep_clean.ipynb` | 🔜 Coming soon | Clean and transform the combined data |
+| `02_sleep_clean.ipynb` | ✅ Complete | Clean and transform the combined data |
 | `03_sleep_analysis.ipynb` | 🔜 Coming soon | Exploratory analysis and visualizations |
 
 ---
@@ -33,6 +33,13 @@ Loads all 9 raw sleep JSON files and combines them into a single table of 800 ni
 The only transformation applied at this stage is flattening Garmin's nested `sleepScores` sub-object into individual columns. Everything else — the raw field names, original units, empty rows, and all columns — is preserved exactly as exported. All cleaning decisions are deferred to the next notebook.
 
 **Output:** `sleep_concat.csv` — 800 rows, 31 columns
+
+## 02_sleep_clean.ipynb
+
+Cleans and transforms the raw concatenated data. Drops 69 empty rows (nights the watch wasn't worn), converts sleep stage durations from seconds to minutes, parses timestamps, derives time-based columns, and standardizes all column names to snake_case. Also flags nap days and extracts sentiment from Garmin's feedback labels.
+
+**Input:** `sleep_concat.csv` — 800 rows, 31 columns
+**Output:** `sleep_clean.csv` — 731 rows, 36 columns
 
 ---
 
@@ -46,4 +53,4 @@ The only transformation applied at this stage is flattening Garmin's nested `sle
 
 ## Status
 
-Active — notebooks 2 and 3 in progress.
+Active — notebooks 3 in progress.
