@@ -47,9 +47,17 @@ Exploratory analysis of the cleaned dataset. Covers sleep score and duration tre
 
 **Inputs:** `sleep_clean.csv` — 731 rows, 36 columns
 
-**Key Findings**
+---
+
+## Key Findings
+
+![Score over time](images/score_over_time.png)
 - **Consistent overall.** An average score in the mid-70s and just over 7 hours of sleep per night, sustained across the full tracking period. No dramatic long-term trends up or down.
+
+![Score by day of the week](images/day_of_week.png)
 - **Weekends are worse.** Lower scores and shorter duration on Saturdays and Sundays — not surprising, but the data confirms it.
+
+![Score by bedtime](images/score_by_bedtime.png)
 - **Bedtime matters.** Later bedtimes correlate with lower sleep scores. Going to bed at 10pm vs 11pm is associated with almost a 10-point difference in overall score.
 
 ---
