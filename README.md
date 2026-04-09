@@ -39,7 +39,6 @@ The only transformation applied at this stage is flattening Garmin's nested `sle
 Cleans and transforms the raw concatenated data. Drops 69 empty rows (nights the watch wasn't worn), converts sleep stage durations from seconds to minutes, parses timestamps, derives time-based columns, and standardizes all column names to snake_case. Also flags nap days and extracts sentiment from Garmin's feedback labels.
 
 **Input:** `sleep_concat.csv` — 800 rows, 31 columns
-
 **Output:** `sleep_clean.csv` — 731 rows, 36 columns
 
 ---
