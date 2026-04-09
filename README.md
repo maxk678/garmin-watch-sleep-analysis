@@ -22,11 +22,11 @@ The project will be structured as a sequential three-notebook pipeline:
 |---|---|---|
 | `01_sleep_concat.ipynb` | ✅ Complete | Load and combine raw JSON files |
 | `02_sleep_clean.ipynb` | ✅ Complete | Clean and transform the combined data |
-| `03_sleep_analysis.ipynb` | 🔜 Coming soon | Exploratory analysis and visualizations |
+| `03_sleep_analysis.ipynb` | ✅ Complete | Exploratory analysis and visualizations |
 
 ---
 
-## 01_sleep_concat.ipynb
+## notebooks/01_sleep_concat.ipynb
 
 Loads all 9 raw sleep JSON files and combines them into a single table of 800 nightly records.
 
@@ -34,12 +34,23 @@ The only transformation applied at this stage is flattening Garmin's nested `sle
 
 **Output:** `sleep_concat.csv` — 800 rows, 31 columns
 
-## 02_sleep_clean.ipynb
+## notebooks/02_sleep_clean.ipynb
 
 Cleans and transforms the raw concatenated data. Drops 69 empty rows (nights the watch wasn't worn), converts sleep stage durations from seconds to minutes, parses timestamps, derives time-based columns, and standardizes all column names to snake_case. Also flags nap days and extracts sentiment from Garmin's feedback labels.
 
 **Input:** `sleep_concat.csv` — 800 rows, 31 columns
 **Output:** `sleep_clean.csv` — 731 rows, 36 columns
+
+## notebooks/03_sleep_analysis.ipynb
+
+Exploratory analysis of the cleaned dataset. Covers sleep score and duration trends over time, stage composition, day-of-week patterns, Garmin feedback label breakdowns, nap day comparisons, and the relationship between bedtime and sleep quality.
+
+**Inputs:** `sleep_clean.csv` — 731 rows, 36 columns
+
+**Key Findings**
+- **Consistent overall.** An average score in the mid-70s and just over 7 hours of sleep per night, sustained across the full tracking period. No dramatic long-term trends up or down.
+- **Weekends are worse.** Lower scores and shorter duration on Saturdays and Sundays — not surprising, but the data confirms it.
+- **Bedtime matters.** Later bedtimes correlate with lower sleep scores. Going to bed at 10pm vs 11pm is associated with almost a 10-point difference in overall score.
 
 ---
 
@@ -47,10 +58,7 @@ Cleans and transforms the raw concatenated data. Drops 69 empty rows (nights the
 
 - Python 3
 - pandas
+- matplotlib
 - Jupyter Notebook
 
 ---
-
-## Status
-
-Active — notebooks 3 in progress.
